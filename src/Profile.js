@@ -1,11 +1,17 @@
 import React from 'react'
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 
 class Profile extends React.Component {
   render() {
     return (
       <View style={{ width: '80%' }}>
+              <Image
+          style={{width: '100%', height: 300, marginBottom: 20, borderRadius: 20, marginTop: 80}}
+          resizeMode='cover'
+          source={require('./images/gabriel-silverio-221749-02.jpg')}
+          
+        />
           <View style={{marginBottom: 20}}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
               <Text style={{ fontSize: 24, color: 'white', fontWeight: "800" }}>Theresa</Text>
