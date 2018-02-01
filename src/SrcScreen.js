@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View } from 'react-native';
 import Interests from './Interests';
 import Profile from './Profile';
+import GradientButton from './ReuseableComponents/GradientButton';
 
 
 class SrcScreen extends React.Component {
@@ -11,9 +12,9 @@ class SrcScreen extends React.Component {
 
         <Profile />
 
+        <Interests />
 
-
-      <Interests />
+        <GradientButton />
 
       </View>
     )
