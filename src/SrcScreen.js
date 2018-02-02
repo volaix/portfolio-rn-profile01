@@ -3,6 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import Interests from './Interests';
 import Profile from './Profile';
 import GradientButton from './ReuseableComponents/GradientButton';
+import Info from './Info';
 
 
 class SrcScreen extends React.Component {
@@ -17,9 +18,10 @@ class SrcScreen extends React.Component {
 
           <Interests />
 
+          <Info />
+
           <GradientButton />
 
-          <Profile />
         </ScrollView>
 
       </View>
