@@ -3,7 +3,6 @@ import { Text, View, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements'
 
 const ToggleButton = (props) => {
-
   return (
     <View style={{ marginLeft: 20, width: '100%', alignItems: 'center' }}>
       <Button 
@@ -13,7 +12,7 @@ const ToggleButton = (props) => {
       fontWeight={'700'}
       buttonStyle={{height:35}}
       containerViewStyle={{ borderRadius: 10, marginLeft: 4, marginRight: 4, marginBottom: 15, width: 130}}
-      onPress={()=>(console.log('button', props.title, ' was pressed'))}
+      onPress={ () => props.onPress(props.title) }
       outline={!props.toggle}
       backgroundColor={'rgba(209,109,138,1)'}
       />
