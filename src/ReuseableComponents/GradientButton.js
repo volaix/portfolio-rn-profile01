@@ -15,16 +15,16 @@ const GradientButton = (props) => {
           paddingLeft: 15,
           paddingRight: 15,
           borderRadius: 20,
-          width: 250,
-          height: 40,
+          width: 340,
+          height: 50,
           justifyContent: 'center',
+          marginBottom: 40,
         }}
         start={[0, 0]}
         end={[1, 0]}
-
       >
         <Text style={{
-          fontSize: 16,
+          fontSize: 20,
           textAlign: 'center',
           margin: 10,
           color: '#ffffff',
