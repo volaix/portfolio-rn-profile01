@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 const DoubleText = (props) => {
 
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={{ flexDirection: 'row', marginBottom: 10 }}>
 
       <Text style={{
         alignItems: 'flex-end',
