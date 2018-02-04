@@ -35,7 +35,8 @@ class HorizontalScroll extends React.Component {
           title: `Rock'n'Roll`,
           toggle: false,
         },
-      ], [
+      ],
+      [
         {
           title: `Swimming`,
           toggle: false,
@@ -66,23 +67,27 @@ class HorizontalScroll extends React.Component {
     ]
   }
 
-flipState = (buttonTitle, buttonGroup) => {
-  console.log('flipping button', buttonTitle)
-  this.setState((prevState)=>{
-    const flipped = !prevState.Buttons[buttonGroup][0].toggle
-    return (
-      {
-        Buttons: [
-          ...prevState.Buttons,
-        ]
-      }
-    )
-  })
-}
+  flipState = (buttonTitle, buttonGroup) => {
+    console.log('flipping button', buttonTitle)
+    //redux thunk this
+    const search = (element) => element.title === buttonTitle
+    this.setState((prevState) => {
+      const flipped = !prevState.Buttons[buttonGroup].find(search).toggle
+      console.log(prevState.Buttons[buttonGroup].find(search))
+      return (
+        {
+          Buttons: [
+            ...prevState.Buttons,
+            ...prevState.Buttons[0].toggle = flipped
+          ]
+        }
+      )
+    })
+  }
 
   render() {
     return (
-      <ScrollView horizontal>
+      <ScrollView horizontal >
 
         {
           this.state.Buttons.map((d, index) => (
