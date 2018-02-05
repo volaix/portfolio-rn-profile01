@@ -3,6 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import { Button } from 'react-native-elements'
 import ToggleButton from './ToggleButton';
 import { connect } from 'react-redux';
+import groupObjectToArray from '../functions/groupObjectToArray';
 
 
 //TODO: refactor with redux
@@ -11,27 +12,28 @@ class HorizontalScroll extends React.Component {
   }
 
   render() {
-    console.log(this.props.signUpButtons)
+
     return (
       <ScrollView horizontal >
 
-        <View>
         {
-          Object.keys(this.props.signUpButtons)
-          .map((buttonID)=>{
-            console.log(buttonID)
-            return (
-              <ToggleButton
-              key={buttonID}
-              title={buttonID}
-              toggle={this.props.signUpButtons[buttonID]}
-              onPress={this.flipState}
-            />
-            )
-          })
+          groupObjectToArray(this.props.signUpButtons).map((objectGroup, index) => (
+            <View key={objectGroup + index}>
+              {
+                Object.keys(objectGroup)
+                  .map((buttonID) => (
+                    <ToggleButton
+                      key={buttonID}
+                      title={buttonID}
+                      toggle={objectGroup[buttonID]}
+                      onPress={this.flipState}
+                    />
+                  )
+                  )
+              }
+            </View>
+          ))
         }
-        </View>
-        
       </ScrollView>
     )
   }
