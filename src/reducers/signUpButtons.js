@@ -15,7 +15,7 @@ const initialState = {
   France: true
 }
 
-const dataReducer = (state = initialState, action) => {
+const signUpButtons = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_BUTTON:
       return (
@@ -30,4 +30,4 @@ const dataReducer = (state = initialState, action) => {
   }
 }
 
-export default dataReducer
+export default signUpButtons
