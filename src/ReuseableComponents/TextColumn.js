@@ -6,7 +6,15 @@ import DoubleText from './DoubleText';
 const TextColumn = (props) => {
   return (
     <View style={{ marginRight: 10, alignItems: 'center', marginBottom: 20 }}>
-
+      {
+        props.data.map((data) => (
+          <DoubleText
+            key={data.category}
+            category={data.category}
+            result={data.result}
+          />
+        ))
+      }
     </View>
   )
 }
