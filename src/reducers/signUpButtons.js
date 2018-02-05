@@ -1,74 +1,30 @@
-const initialState = [
-  {
-    title: 'Philosophy',
-    toggle: true,
-  },
-  {
-    title: 'Music',
-    toggle: true,
-  },
-  {
-    title: 'Travelling',
-    toggle: false,
-  },
-  {
-    title: 'Sport',
-    toggle: true,
-  },
-  {
-    title: 'Soccer',
-    toggle: false,
-  },
-  {
-    title: `Rock'n'Roll`,
-    toggle: false,
-  },
-  {
-    title: `Swimming`,
-    toggle: false,
-  },
-  {
-    title: `Radiohead`,
-    toggle: false,
-  },
-  {
-    title: `Dog`,
-    toggle: true,
-  },
-  {
-    title: `Religion`,
-    toggle: true,
-  },
-  {
-    title: `Michael Jackson`,
-    toggle: true,
-  },
-  {
-    title: `France`,
-    toggle: true,
-  }
-]
+import { UPDATE_BUTTON } from "../constants";
+
+const initialState = {
+  Philosophy: true,
+  Music: true,
+  Travelling: false,
+  Sport: true,
+  Soccer: false,
+  'Rock\'n\'Roll': false,
+  Swimming: false,
+  Radiohead: false,
+  Dog: true,
+  Religion: true,
+  'Michael Jackson': true,
+  France: true
+}
 
 const dataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCHING_DATA:
-      return {
-        ...state,
-        data: [],
-        isFetching: true
-      }
-    case FETCHING_DATA_SUCCESS:
-      return {
-        ...state,
-        isFetching: false,
-        data: action.data
-      }
-    case FETCHING_DATA_FAILURE:
-      return {
-        ...state,
-        isFetching: false,
-        error: true
-      }
+    case UPDATE_BUTTON:
+      return (
+         state.map((button)=>{
+          if (button.toggle === action.toggle) {
+            return {...button, ...action.payload};
+          } else return button
+         })
+        )
     default:
       return state
   }
