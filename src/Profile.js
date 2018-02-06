@@ -7,7 +7,7 @@ class Profile extends React.Component {
     return (
       <View style={{ width: '80%' }}>
               <Image
-          style={{width: '100%', height: 300, marginBottom: 20, borderRadius: 20, marginTop: 80}}
+          style={{width: '100%', height: 300, marginBottom: 20, borderRadius: 20, marginTop: 15}}
           resizeMode='cover'
           source={require('./images/gabriel-silverio-221749-02.jpg')}
           

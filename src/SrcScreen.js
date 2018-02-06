@@ -14,6 +14,9 @@ class SrcScreen extends React.Component {
         <ScrollView
           contentContainerStyle={{ alignItems: 'center' }}
         >
+
+          <Text style={{marginTop: 30, color: 'white', fontSize: 22}}>Theresa, 26</Text>
+
           <Profile />
 
           <Interests />
