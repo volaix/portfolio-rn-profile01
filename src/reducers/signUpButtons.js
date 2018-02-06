@@ -18,13 +18,14 @@ const initialState = {
 const signUpButtons = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_BUTTON:
-      return (
-         state.map((button)=>{
-          if (button.toggle === action.toggle) {
-            return {...button, ...action.payload};
-          } else return button
-         })
-        )
+    console.log('we are trying to do the reduce thing now')
+    const updatedButton = action.buttonTitle
+    console.log(updatedButton)
+    console.log(state[updatedButton])
+      return ({
+        ...state,
+        [updatedButton]: !state[updatedButton]
+      })
     default:
       return state
   }

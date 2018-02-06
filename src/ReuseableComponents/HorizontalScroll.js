@@ -4,11 +4,12 @@ import { Button } from 'react-native-elements'
 import ToggleButton from './ToggleButton';
 import { connect } from 'react-redux';
 import groupObjectToArray from '../functions/groupObjectToArray';
+import { buttonUpdate } from '../actions';
 
-
-//TODO: refactor with redux
 class HorizontalScroll extends React.Component {
-  flipState = (buttonTitle, buttonGroup) => {
+  flipState = (buttonTitle) => {
+    console.log('flipstate ran')
+    this.props.buttonUpdate(buttonTitle)
   }
 
   render() {
@@ -46,11 +47,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-// const mapDispatchToProps = {
-//   fetchData,
-// }
-
+const mapDispatchToProps = {
+  buttonUpdate,
+}
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(HorizontalScroll)

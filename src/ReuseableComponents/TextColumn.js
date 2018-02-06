@@ -5,7 +5,8 @@ import DoubleText from './DoubleText';
 
 const TextColumn = (props) => {
   return (
-    <View style={{ marginRight: 10, alignItems: 'center', marginBottom: 20 }}>
+    <View style={{ marginRight: 20, alignItems: 'center', justifyContent: 'center',
+     marginBottom: 20, }}>
       {
         props.data.map((data) => (
           <DoubleText

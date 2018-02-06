@@ -12,7 +12,7 @@ const ToggleButton = (props) => {
       fontWeight={'700'}
       buttonStyle={{height:35}}
       containerViewStyle={{ borderRadius: 10, marginLeft: 4, marginRight: 4, marginBottom: 15, width: 130}}
-      onPress={ () => props.onPress(props.title, props.buttonGroup) }
+      onPress={ () => props.onPress(props.title) }
       outline={!props.toggle}
       backgroundColor={'rgba(209,109,138,1)'}
       />
