@@ -26,3 +26,43 @@ groupObjectToArray = (buttonObject) => {
 }
 
 export default groupObjectToArray
+
+// //  input
+// const initialState = {
+//   Philosophy: true,
+//   Music: true,
+//   Travelling: false,
+//   Sport: true,
+//   Soccer: false,
+//   'Rock\'n\'Roll': false,
+//   Swimming: false,
+//   Radiohead: false,
+//   Dog: true,
+//   Religion: true,
+//   'Michael Jackson': true,
+//   France: true
+// }
+
+// //  output
+// const finalObject = [
+//   {
+//     Philosophy: true,
+//     Music: true,
+//     Travelling: false,
+//   },
+//   {
+//     Sport: true,
+//     Soccer: false,
+//     'Rock\'n\'Roll': false,
+//   },
+//   {
+//     Swimming: false,
+//     Radiohead: false,
+//     Dog: true,
+//   },
+//   {
+//     Religion: true,
+//     'Michael Jackson': true,
+//     France: true
+//   }
+// ]
